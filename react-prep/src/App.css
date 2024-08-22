@@ -1,0 +1,9 @@
+.app{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.component-wrapper{
+    padding: 20px;
+    border: 1px solid #333;
+}

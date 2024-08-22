@@ -1,11 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
-import UseTimerComponent from "./components/userTimerComponent";
+import UseTimerComponent from "./customHooks/useTimer/userTimerComponent";
 
 function App() {
   return (
     <div className="App">
-      <UseTimerComponent />
+      <UseTimerComponent/>
     </div>
   );
 }
