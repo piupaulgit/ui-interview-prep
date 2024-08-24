@@ -15,7 +15,7 @@ function myMap(callback, thisArg) {
   var k = 0;
   var resultArray = [];
   while (k < this.length) {
-    resultArray[k] = callback(this[k], k);
+    resultArray[k] = callback.call(thisArg, this[k], k, this);
     k++;
   }
 
