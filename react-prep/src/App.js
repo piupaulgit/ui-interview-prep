@@ -1,10 +1,13 @@
 import "./App.css";
 import UseTimerComponent from "./customHooks/useTimer/userTimerComponent";
+import Sidebar from "./ThreeLinkSidebar/Sidebar";
 
 function App() {
   return (
     <div className="App">
-      <UseTimerComponent/>
+      <UseTimerComponent />
+      <hr />
+      <Sidebar />
     </div>
   );
 }
