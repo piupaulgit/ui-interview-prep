@@ -1,0 +1,29 @@
+.country-capital-game ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.country-capital-game ul li{
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 3px solid #333;
+    border-radius: 5px;
+    padding: 12px 33px;
+}
+.country-capital-game ul li:hover{
+    background-color: bisque;
+}
+
+.country-capital-game ul li.selected {
+    border-color: blue;
+}
+
+.country-capital-game ul li.correct {
+    border-color: green;
+}
+
+.country-capital-game ul li.inCorrect {
+    border-color: red;
+}
