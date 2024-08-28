@@ -86,12 +86,63 @@ class SinglyLinkedList {
     }
     return node;
   }
+
+  set(position, value) {
+    const foundNode = this.get(position);
+
+    if (foundNode) {
+      foundNode.value = value;
+      return true;
+    }
+    return false;
+  }
+
+  insert(position, value) {
+    if (position < 0 || position > this.length) return false;
+
+    if (position === this.length - 1) {
+      this.push(value);
+    }
+
+    if (position === 0) {
+      this.unShift(value);
+    }
+    const newNode = new Node(value);
+
+    const prevNode = this.get(position - 1);
+    const nextNode = prevNode.next;
+    prevNode.next = newNode;
+    newNode.next = nextNode;
+
+    this.length++;
+
+    return this;
+  }
+
+  remove(position) {
+    if (position < 0 || position > this.length) return false;
+
+    if (position === 0) {
+      this.shift();
+      return;
+    }
+
+    if (position === this.length) {
+      this.pop();
+      return;
+    }
+    const prevNode = this.get(position - 1);
+    const nextNode = prevNode.next.next;
+    prevNode.next = nextNode;
+
+    this.length--;
+  }
 }
 
 const singlyLinkedList = new SinglyLinkedList();
-singlyLinkedList.push(4);
-singlyLinkedList.push(6);
-singlyLinkedList.push(5);
+singlyLinkedList.push(1);
+singlyLinkedList.push(2);
+singlyLinkedList.push(3);
 
 // singlyLinkedList.pop();
 // singlyLinkedList.pop();
@@ -110,4 +161,11 @@ singlyLinkedList.push(5);
 // const node = singlyLinkedList.get(1);
 // console.log(node);
 
-// console.log(singlyLinkedList);
+// console.log(singlyLinkedList.get(2));
+// singlyLinkedList.set(2, "piu");
+// console.log(singlyLinkedList.get(2));
+
+// singlyLinkedList.insert(1, "inserted");
+// singlyLinkedList.remove(1);
+
+console.log(singlyLinkedList);
