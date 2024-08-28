@@ -1,7 +1,7 @@
 import "./App.css";
 import UseTimerComponent from "./customHooks/useTimer/userTimerComponent";
 import Sidebar from "./TreeLinkSidebar/Sidebar";
-import {DATA} from './country_capitalGame/Data';
+import { DATA } from "./country_capitalGame/Data";
 import Game from "./country_capitalGame/Game";
 
 function App() {
@@ -9,9 +9,10 @@ function App() {
     <div className="App">
       <UseTimerComponent />
       <hr />
-      {/* <Sidebar /> */}
+      <Game data={DATA} />
       <hr />
-      <Game data={DATA}/>
+      <Sidebar />
+      <hr />
     </div>
   );
 }
