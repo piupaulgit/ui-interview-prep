@@ -1,4 +1,5 @@
 .country-capital-game ul {
+    margin: 50px 0;
     display: flex;
     list-style: none;
     gap: 10px;
@@ -26,4 +27,8 @@
 
 .country-capital-game ul li.inCorrect {
     border-color: red;
+}
+.congratualtions{
+    text-align: center;
+    margin: 50px 0;
 }
