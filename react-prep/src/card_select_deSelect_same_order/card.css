@@ -1,0 +1,24 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+.card .row{
+    display: flex;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.card .row .each_box{
+    height: 50px;
+    width: 50px;
+    transition: background-color 0.4s ease-in;
+}
+.card .row .each_box.visible{
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.card .row .each_box.visible.selected {
+    background-color:green;
+}
