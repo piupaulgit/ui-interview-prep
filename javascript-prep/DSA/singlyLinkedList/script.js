@@ -141,21 +141,22 @@ class SinglyLinkedList {
   print() {
     const arr = [];
     let current = this.head;
-    while(current){
+    while (current) {
       arr.push(current.value);
       current = current.next;
     }
 
-    console.log(arr)
+    console.log(arr);
   }
 
   reverse() {
     let node = this.head;
     this.head = this.tail;
     this.tail = node;
-    let prev = null, next;
-    for(let i = 0; i <this.length; i++){
-      next = node.next; 
+    let prev = null,
+      next;
+    for (let i = 0; i < this.length; i++) {
+      next = node.next;
       node.next = prev;
       prev = node;
       node = next;
@@ -166,7 +167,10 @@ class SinglyLinkedList {
 const singlyLinkedList = new SinglyLinkedList();
 singlyLinkedList.push(1);
 singlyLinkedList.push(2);
-singlyLinkedList.push(3);
+singlyLinkedList.push(1);
+singlyLinkedList.push(2);
+singlyLinkedList.push(1);
+// singlyLinkedList.push(6);
 
 // singlyLinkedList.pop();
 // singlyLinkedList.pop();
