@@ -162,14 +162,28 @@ class SinglyLinkedList {
       node = next;
     }
   }
+
+  alternateConsequtiveItems() {
+    if (this.length === 0) return null;
+    if (this.length === 1) return this;
+
+    let current = this.head;
+    while (current.next && current.next.next) {
+      let expectedRight = current;
+      let expectedLeft = current.next;
+      current.next = expectedRight;
+      expectedLeft = current.next.next;
+      current = current.next;
+    }
+    console.log(this);
+  }
 }
 
 const singlyLinkedList = new SinglyLinkedList();
 singlyLinkedList.push(1);
 singlyLinkedList.push(2);
-singlyLinkedList.push(1);
-singlyLinkedList.push(2);
-singlyLinkedList.push(1);
+singlyLinkedList.push(3);
+singlyLinkedList.push(4);
 // singlyLinkedList.push(6);
 
 // singlyLinkedList.pop();
@@ -198,4 +212,6 @@ singlyLinkedList.push(1);
 
 // singlyLinkedList.print()
 // singlyLinkedList.reverse();
-// singlyLinkedList.print()
+singlyLinkedList.print();
+singlyLinkedList.alternateConsequtiveItems();
+singlyLinkedList.print();
