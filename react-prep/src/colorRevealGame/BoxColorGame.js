@@ -14,7 +14,9 @@ const shuffleColors = (colors) => {
 
 const BoxColorGame = ({ boxCount }) => {
   const [boxList, setBoxList] = useState([]);
-  const [selectedBoxes, setSelectedBoxes] = useState(new Map());
+  const [activeColor, setActiveColor] = useState([]);
+  const [revealedColors, setRevealedColors] = useState(new Set());
+  const [roundCount, setRoundCount] = useState(0);
 
   useMemo(() => {
     const randomColors = getRandomColorList(boxCount / 2);
@@ -31,59 +33,46 @@ const BoxColorGame = ({ boxCount }) => {
     setBoxList(boxes);
   }, [boxCount]);
 
-  const handleOnclick = (id, color, revealed) => {
-    if (revealed !== false) {
-      const isBoxAlreadySelectedCount = selectedBoxes.get(color) + 1 || 0 + 1;
-      setBoxList(
-        boxList.map((bx) => (bx.id === id ? { ...bx, revealed: true } : bx))
-      );
-      setSelectedBoxes((prev) => prev.set(color, isBoxAlreadySelectedCount));
-
-      if (isBoxAlreadySelectedCount === 2) {
-        console.log("win");
-      } else {
-        console.log("lose");
-      }
+  const handleOnclick = (currentColor) => {
+    if (activeColor.length === 0) {
+      setActiveColor([currentColor]);
+      return;
     }
+
+    if (activeColor[0] === currentColor) {
+      setRevealedColors((prev) => new Set(prev.add(currentColor)));
+      setActiveColor([]);
+    } else {
+      setTimeout(() => {
+        setActiveColor([]);
+      }, 1000);
+    }
+
+    setRoundCount((prev) => prev + 1);
   };
 
   return (
     <div className="container">
-      <div className="boxes">
-        {boxList &&
-          boxList.map((box) => {
-            return (
-              <Box
-                key={box.id}
-                {...box}
-                handleClick={handleOnclick}
-                selectedBoxes={selectedBoxes}
-              />
-            );
-          })}
-      </div>
+      {revealedColors.size === boxCount / 2 ? (
+        <p>Game Over</p>
+      ) : (
+        <div className="boxes">
+          {boxList &&
+            boxList.map((box) => {
+              return (
+                <Box
+                  key={box.id}
+                  {...box}
+                  revealedColors={revealedColors}
+                  activeColor={activeColor}
+                  handleClick={handleOnclick}
+                />
+              );
+            })}
+        </div>
+      )}
     </div>
   );
 };
 
 export default BoxColorGame;
-
-// 1. Render ui with box countBy
-// 2. generate randor colors
-// 3. assign random color to the boxes
-// 4. handle click of the boxes
-//     first Selection
-//       reveal color
-
-//     second select
-//       reveal color
-//       increase countBy
-
-//       check if the colors are same
-//         same:
-//           save store
-//           stay with true colors
-//         not same:
-//           back to white
-
-// reset functionlaity
