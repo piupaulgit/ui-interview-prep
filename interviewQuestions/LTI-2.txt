@@ -1,0 +1,57 @@
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+question 1 start
+===================
+c.l(1)
+fs.read(() c.l('resolved'))
+process.nextTick(() c.l(2))
+setTimeout (()=> c.l(3), 0ms)
+c.l(4)
+
+1
+4
+2
+resolved
+3
+
+question 1 ends
+=======================
+
+question 2 starts
+=======================
+
+const promise1 = Promise.resolve("One"); 
+const promise2 = new Promise((resolve) => setTimeout(() => resolve("Two"), 1000)); 
+const promise3 = Promise.reject("Three");
+const results = Promise.allSettled([promise1, promise2, promise3])
+console.log(results);
+
+[
+    {status: 'fullfilled', value: 'one'},
+     {status: 'fullfilled', value: 'two'},
+    {status: 'rejected', reason: 'Three'},
+]
+question 2 ends
+=======================
+
+Question 3 starts
+====================== 
+    Mongo query: restaurants with a grade of 2 or 6 that are located in Mumbai and whose cuisine isn't veg
+    
+    answers:
+    
+ db.restaurants.find({
+  $and: [
+    { "location.city": "Mumbai" },
+    { "grades.grade": { $in: [2, 6] } },
+    { "cuisine": { $ne: "veg" } }
+  ]
+})
+
+    Question 3 ends
+======================
+    
+    
+    
+    

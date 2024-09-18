@@ -7,6 +7,7 @@ import Game from "./country_capitalGame/Game";
 import Card from "./card_select_deSelect_same_order/Card";
 import Chart from "./velocity_chart/Chart";
 import BoxColorGame from "./colorRevealGame/BoxColorGame";
+import Page from "./pagination/Page";
 
 const BOX_COUNT = 12;
 
@@ -21,7 +22,9 @@ function App() {
       <hr /> */}
       {/* <Chart data={CHART_DATA} /> */}
       <hr />
-      <BoxColorGame boxCount={BOX_COUNT} />
+      {/* <BoxColorGame boxCount={BOX_COUNT} /> */}
+      <hr />
+      <Page />
     </div>
   );
 }

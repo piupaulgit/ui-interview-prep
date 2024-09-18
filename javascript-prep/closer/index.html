@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function increase(){
+            let param = 3;
+            return function innner(val){
+                param++
+                return val+param
+            }
+        }
+
+        const result1 = increase() // 6
+        const result2 = increase() // 7
+
+        console.log(result1(2))
+        console.log(result2(4))
+    </script>
+</body>
+</html>

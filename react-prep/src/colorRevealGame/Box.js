@@ -21,6 +21,17 @@ const Box = ({ color, handleClick, revealedColors, activeColor }) => {
     }
   }, [revealedColors, activeColor]);
 
+  const startSession = () => {
+    show();
+    if (color) {
+      setBackgroundColor("red");
+    }
+  };
+
+  const show = () => {
+    console.log("gg");
+  };
+
   return (
     <div
       onClick={handleBoxClick}
