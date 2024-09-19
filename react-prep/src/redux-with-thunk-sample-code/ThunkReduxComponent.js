@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { fetchData } from "./thunk";
-import connect from "react-redux";
+import { connect } from "react-redux";
 
-const Component = ({ data, isLoading, error, fetchData }) => {
+const ThunkReduxComponent = ({ data, isLoading, error, fetchData }) => {
   useEffect(() => {
     fetchData();
   }, [fetchData]);
@@ -14,12 +14,17 @@ const Component = ({ data, isLoading, error, fetchData }) => {
   return <div>Component</div>;
 };
 
-const mapStateToProps = (state) => ({
-  data: state.data,
-  isLoading: state.isLoading,
-  error: state.error,
-});
+const mapStateToProps = (state) => {
+  return {
+    data: state.data,
+    isLoading: state.isLoading,
+    error: state.error,
+  };
+};
 
 const mapDispatchToProps = { fetchData };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Component);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ThunkReduxComponent);
