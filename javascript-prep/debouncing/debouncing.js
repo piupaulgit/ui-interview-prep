@@ -3,18 +3,18 @@ const input = document.getElementById("input");
 const debounce = (func, delay) => {
   let timer;
 
-  return (...args) => {
+  return (...arge) => {
     clearInterval(timer);
     timer = setTimeout(() => {
-      func(...args);
+      func(...arge);
     }, delay);
   };
 };
 
 const callApi = (e) => {
-  console.log(e.target.value);
+  console.log(e.value);
 };
 
-const debounceApi = debounce(callApi, 1000);
+const apiDebounce = debounce(callApi, 1000);
 
-input.addEventListener("input", debounceApi);
+input.addEventListener("input", apiDebounce);
