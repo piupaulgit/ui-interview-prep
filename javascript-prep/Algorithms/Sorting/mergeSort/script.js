@@ -1,35 +1,32 @@
-const mergeSort = () => {
-  let result = [];
+const mergeSort = (arr) => {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  let mid = Math.floor(arr.length / 2);
+  let left = mergeSort(arr.slice(0, mid));
+  let right = mergeSort(arr.slice(mid));
+
+  return merge(left, right);
 };
 
-const mergeTwoArrays = (arr1, arr2) => {
+const merge = (arr1, arr2) => {
   let result = [];
-  let leftArrayPointer = 0;
-  let rightArrayPointer = 0;
+  let i = 0;
+  let j = 0;
 
-  while (leftArrayPointer <= arr1.length || rightArrayPointer <= arr2.length) {
-    if (arr1[leftArrayPointer] <= arr2[rightArrayPointer]) {
-      result.push(arr1[leftArrayPointer]);
-      leftArrayPointer++;
-    }
-
-    if (arr2[rightArrayPointer] < arr1[leftArrayPointer]) {
-      result.push(arr2[rightArrayPointer]);
-      rightArrayPointer++;
-    }
-
-    if (leftArrayPointer === arr1.length) {
-      result.push(arr2[rightArrayPointer]);
-      rightArrayPointer++;
-    }
-
-    if (rightArrayPointer === arr2.length) {
-      result.push(arr1[leftArrayPointer]);
-      leftArrayPointer++;
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      result.push(arr1[i]);
+      i++;
+    } else {
+      result.push(arr2[j]);
+      j++;
     }
   }
 
-  console.log(result);
+  return result.concat(arr1.slice(i)).concat(arr2.slice(j));
 };
 
-mergeTwoArrays([1, 4, 5, 6], [2, 3, 5, 9]);
+const arr = [38, 27, 43, 3, 9, 82, 10];
+console.log(mergeSort(arr));
