@@ -8,8 +8,8 @@ import Card from "./card_select_deSelect_same_order/Card";
 import Chart from "./velocity_chart/Chart";
 import BoxColorGame from "./colorRevealGame/BoxColorGame";
 import Page from "./pagination/Page";
-import ThunkReduxComponent from "./redux-with-thunk-sample-code/ThunkReduxComponent";
 import ToolKitApp from "./redux-toolkit/ToolKitApp";
+import TikTacToeGame from "./TikTacToeGame/TikTacToeGame";
 
 const BOX_COUNT = 12;
 
@@ -26,9 +26,8 @@ function App() {
       <hr />
       <BoxColorGame boxCount={BOX_COUNT} />
       <hr />
-      <Page /> 
-      <ThunkReduxComponent /> */}
-      <ToolKitApp />
+      <Page /> */}
+      <TikTacToeGame />
     </div>
   );
 }

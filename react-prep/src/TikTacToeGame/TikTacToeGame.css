@@ -1,0 +1,51 @@
+.board{
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 300px;
+}
+
+.square {
+    border: 1px solid #333;
+    max-width: 33.33%;
+    flex: 33.33%;
+    position: relative;
+}
+
+.playerOne{
+    height: 70px;
+    width: 70px;
+    background-color: #fff;
+    border: 5px solid green;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.playerTwo{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+}
+.playerTwo:before{
+    height: 50px;
+    width: 5px;
+    background-color: red;
+    position: absolute;
+    content: '';
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.playerTwo:after{
+    height: 50px;
+    width: 5px;
+    background-color: red;
+    position: absolute;
+    content: '';
+    transform: rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
