@@ -1,0 +1,24 @@
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+.day-name{
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+.day {
+    padding: 30px 25px;
+    border: 1px solid #acacac;
+    text-align: center;
+}
+.inactive-days{
+    opacity: .3;
+}

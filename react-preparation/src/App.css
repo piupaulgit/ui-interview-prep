@@ -1,0 +1,14 @@
+header{
+  border-bottom: 1px solid #d5cfcf;
+  padding: 20px 0;
+  text-align: center;
+}
+main{
+  display: flex;
+  justify-content: space-around;
+}
+
+.pageHeader {
+  font-size: 30px;
+  color: #333;
+}
