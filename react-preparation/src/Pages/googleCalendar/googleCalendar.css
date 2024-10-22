@@ -1,0 +1,9 @@
+.calendar-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar-header Select{
+    width: 150px;
+    padding: 10px;
+}

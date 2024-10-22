@@ -1,9 +1,8 @@
 import "./day.css";
 
-const Day = ({ date, dayName }) => {
+const Day = ({ date, isInActiveDate }) => {
   return (
-    <div className="day">
-      <h3>{dayName}</h3>
+    <div className={`day ${isInActiveDate && "inactive-days"}`}>
       <h4>{date}</h4>
       <div></div>
     </div>

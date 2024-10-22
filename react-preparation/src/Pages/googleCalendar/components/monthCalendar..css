@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.calendar-grid{
+.month-calendar-grid{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
@@ -14,11 +14,8 @@
     text-align: center;
     background-color: #f1f1f1;
 }
-.day {
-    padding: 30px 25px;
-    border: 1px solid #acacac;
-    text-align: center;
-}
-.inactive-days{
-    opacity: .3;
+.week-calendar-grid{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 5px;
 }

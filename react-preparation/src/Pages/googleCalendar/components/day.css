@@ -1,0 +1,13 @@
+.day {
+    padding: 10px;
+    border: 1px solid #acacac;
+    text-align: center;
+    cursor: pointer;
+}
+.day:hover{
+    background-color: #e3e1e1;
+}
+.inactive-days{
+    opacity: .3;
+    cursor: default;
+}

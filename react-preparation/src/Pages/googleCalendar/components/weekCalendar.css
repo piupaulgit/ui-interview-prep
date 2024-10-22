@@ -1,0 +1,30 @@
+.week-calendar{
+    border: 1px solid #f1f1f1;
+}
+.week-calendar .calendar-header{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+.day-name{
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+.week-calendar-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.week-calendar-header button {
+    margin-left: 10px;
+}
+.week-calendar-header h4{
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+.week-day{
+    text-align: center;
+    border: 1px solid #f1f1f1;
+}

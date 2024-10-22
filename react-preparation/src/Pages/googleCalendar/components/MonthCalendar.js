@@ -1,29 +1,16 @@
-import "./calendar.css";
+import "./monthCalendar..css";
 import { useEffect, useState } from "react";
+import Day from "./Day";
+import { weekdays, monthNames } from "../constants";
 
-const Calendar = () => {
-  const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thus", "Fri", "Sat"];
-  const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  const [year, setYear] = useState(new Date().getFullYear());
-  const [month, setMonth] = useState(new Date().getMonth());
-  const [calendarGrid, setCalendarGrid] = useState([]);
+const MonthCalendar = ({ year, month }) => {
+  const [currentYear, setCurrentYear] = useState(year);
+  const [currentMonth, setCurrentMonth] = useState(month);
+  const [calendarMonthGrid, setCalendarMonthGrid] = useState([]);
 
   useEffect(() => {
-    setCalendarGrid(getCalendarDays(year, month));
-  }, [year, month]);
+    setCalendarMonthGrid(getMonthCalendarDays(currentYear, currentMonth));
+  }, [currentYear, currentMonth]);
 
   const getTotalDaysInAMonth = (year, month) => {
     return new Date(year, month + 1, 0).getDate();
@@ -33,7 +20,7 @@ const Calendar = () => {
     return new Date(year, month, 1).getDay();
   };
 
-  const getCalendarDays = (year, month) => {
+  const getMonthCalendarDays = (year, month) => {
     const totalNumberOfGrids = 42; //7columns*6rows
     const firstDayOfCurrentMonth = getFirstDay(year, month);
     const totalDaysOfCurrentMonth = getTotalDaysInAMonth(year, month);
@@ -69,29 +56,29 @@ const Calendar = () => {
     let updatedMonth;
     let updatedYear;
     if (type == "next") {
-      updatedMonth = month === 11 ? 0 : month + 1;
-      updatedYear = month === 11 ? year + 1 : year;
+      updatedMonth = currentMonth === 11 ? 0 : currentMonth + 1;
+      updatedYear = currentMonth === 11 ? currentYear + 1 : currentYear;
     } else {
-      updatedMonth = month === 0 ? 11 : month - 1;
-      updatedYear = month === 0 ? year - 1 : year;
+      updatedMonth = currentMonth === 0 ? 11 : currentMonth - 1;
+      updatedYear = currentMonth === 0 ? currentYear - 1 : currentYear;
     }
 
-    setMonth(updatedMonth);
-    setYear(updatedYear);
+    setCurrentMonth(updatedMonth);
+    setCurrentYear(updatedYear);
   };
 
   return (
     <div className="calendar">
       <header className="calendar-header">
         <h2>
-          {monthNames[month]}, {year}
+          {monthNames[currentMonth]}, {currentYear}
         </h2>
         <div>
           <button onClick={() => changeYearAndMonth("prev")}>Previous</button>
           <button onClick={() => changeYearAndMonth("next")}>Next</button>
         </div>
       </header>
-      <div className="calendar-grid">
+      <div className="month-calendar-grid">
         {weekdays.map((dayName, index) => {
           return (
             <div className="day-name" key={index}>
@@ -99,20 +86,18 @@ const Calendar = () => {
             </div>
           );
         })}
-        {calendarGrid.map((date, index) => {
+        {calendarMonthGrid.map((date, index) => {
           return (
-            <div
-              className={`day ${
-                (index < getFirstDay(year, month) ||
-                  index + 1 >
-                    getTotalDaysInAMonth(year, month) +
-                      getFirstDay(year, month)) &&
-                "inactive-days"
-              }`}
+            <Day
+              date={date}
               key={index}
-            >
-              {date}
-            </div>
+              isInActiveDate={
+                index < getFirstDay(currentYear, currentMonth) ||
+                index + 1 >
+                  getTotalDaysInAMonth(currentYear, currentMonth) +
+                    getFirstDay(currentYear, currentMonth)
+              }
+            />
           );
         })}
       </div>
@@ -120,4 +105,4 @@ const Calendar = () => {
   );
 };
 
-export default Calendar;
+export default MonthCalendar;
