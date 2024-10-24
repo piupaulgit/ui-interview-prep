@@ -1,0 +1,7 @@
+
+.search-result{
+    display: none;
+}
+.search-result.show{
+    display: block;
+}
