@@ -16,6 +16,16 @@ const getFruits = (keyword) => {
   });
 };
 
+const debounce = (fn, delay) => {
+  let clearTimeout;
+  return function (...args) {
+    clearInterval(clearTimeout);
+    clearTimeout = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+};
+
 // util file ends
 
 const input = document.getElementById("search-input");
@@ -26,9 +36,9 @@ const reset = () => {
 };
 
 const getFilteredResult = async (keyword) => {
-  reset();
   let data = await getFruits(keyword);
   const searchBoxFragment = document.createDocumentFragment();
+  console.log(data);
 
   if (data.length > 0) {
     data.forEach((item) => {
@@ -37,15 +47,22 @@ const getFilteredResult = async (keyword) => {
       searchBoxFragment.appendChild(el);
     });
 
+    searchResultBox.innerHTML = "";
     searchResultBox.appendChild(searchBoxFragment);
     searchResultBox.classList.add("show");
+  } else {
+    searchResultBox.innerHTML = "";
   }
 };
 
-const handleChange = (e) => {
-  getFilteredResult(e.target.value);
+const handleChange = (event) => {
+  if (event.target.value) {
+    getFilteredResult(event.target.value);
+  } else {
+    searchResultBox.innerHTML = "";
+  }
 };
 
 (() => {
-  input.addEventListener("input", (e) => handleChange(e));
+  input.addEventListener("input", debounce(handleChange, 500));
 })();
