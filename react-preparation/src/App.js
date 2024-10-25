@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MainBody from "./components/mainAppComponents/MainBody";
 import Home from "./Pages/Home";
 import GoogleCalendar from "./Pages/googleCalendar/GoogleCalendar";
+import TypeAheadAutoComplete from "./Pages/typeAheadAutoComplete/TypeAheadAutoComplete";
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/googleCalendar" element={<GoogleCalendar />} />
+              <Route
+                path="/typeAheadAutoComplete"
+                element={<TypeAheadAutoComplete />}
+              />
             </Routes>
           </MainBody>
         </main>

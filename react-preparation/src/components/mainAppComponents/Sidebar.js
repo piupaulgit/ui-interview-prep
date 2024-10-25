@@ -12,6 +12,9 @@ const SideBar = () => {
           <li>
             <Link to="/googleCalendar">Google Calendar</Link>
           </li>
+          <li>
+            <Link to="/typeAheadAutoComplete">Type Ahead/ auto complete</Link>
+          </li>
         </ul>
       </nav>
     </div>
