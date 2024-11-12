@@ -5,6 +5,8 @@ import MainBody from "./components/mainAppComponents/MainBody";
 import Home from "./Pages/Home";
 import GoogleCalendar from "./Pages/googleCalendar/GoogleCalendar";
 import TypeAheadAutoComplete from "./Pages/typeAheadAutoComplete/TypeAheadAutoComplete";
+import Notification from "./Pages/notification/Notification";
+import Modal from "./Pages/modal/Modal";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
                 path="/typeAheadAutoComplete"
                 element={<TypeAheadAutoComplete />}
               />
+              <Route path="/notification" element={<Notification />} />
+              <Route path="/modal" element={<Modal />} />
             </Routes>
           </MainBody>
         </main>

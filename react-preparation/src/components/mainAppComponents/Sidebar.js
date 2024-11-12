@@ -15,6 +15,12 @@ const SideBar = () => {
           <li>
             <Link to="/typeAheadAutoComplete">Type Ahead/ auto complete</Link>
           </li>
+          <li>
+            <Link to="/notification">Notification</Link>
+          </li>
+          <li>
+            <Link to="/modal">Modal</Link>
+          </li>
         </ul>
       </nav>
     </div>
