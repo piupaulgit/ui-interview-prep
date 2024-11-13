@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "../../components/mainAppComponents/PageHeader";
 import ModalComponent from "./components/ModalComponent";
 
 const Modal = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <PageHeader text="Modal" />
-      <ModalComponent>
-        <ModalComponent.Header>
+      <ModalComponent isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <ModalComponent.Header onClose={() => setIsOpen(false)}>
           <p>This is modal header</p>
         </ModalComponent.Header>
         <ModalComponent.Body>
@@ -15,6 +16,7 @@ const Modal = () => {
         </ModalComponent.Body>
         <ModalComponent.Footer>
           <p>This is modal footer</p>
+          <button onClick={() => console.log("submit")}>Submit</button>
         </ModalComponent.Footer>
       </ModalComponent>
       <div>
@@ -66,7 +68,7 @@ const Modal = () => {
           is therefore always free from repetition, injected humour, or
           non-characteristic words etc.
         </p>
-        <button>Show Modal</button>
+        <button onClick={() => setIsOpen(!isOpen)}>Show Modal</button>
         <p>
           What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
           and typesetting industry. Lorem Ipsum has been the industry's standard
