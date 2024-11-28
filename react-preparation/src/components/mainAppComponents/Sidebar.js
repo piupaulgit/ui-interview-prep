@@ -21,6 +21,9 @@ const SideBar = () => {
           <li>
             <Link to="/modal">Modal</Link>
           </li>
+          <li>
+            <Link to="/trafficLight">Traffic light</Link>
+          </li>
         </ul>
       </nav>
     </div>

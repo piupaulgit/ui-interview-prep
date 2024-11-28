@@ -7,6 +7,7 @@ import GoogleCalendar from "./Pages/googleCalendar/GoogleCalendar";
 import TypeAheadAutoComplete from "./Pages/typeAheadAutoComplete/TypeAheadAutoComplete";
 import Notification from "./Pages/notification/Notification";
 import Modal from "./Pages/modal/Modal";
+import TrafficLight from "./Pages/trafficLight/TrafficLight";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               />
               <Route path="/notification" element={<Notification />} />
               <Route path="/modal" element={<Modal />} />
+              <Route path="/trafficLight" element={<TrafficLight />} />
             </Routes>
           </MainBody>
         </main>
