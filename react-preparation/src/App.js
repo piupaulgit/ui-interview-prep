@@ -8,6 +8,7 @@ import TypeAheadAutoComplete from "./Pages/typeAheadAutoComplete/TypeAheadAutoCo
 import Notification from "./Pages/notification/Notification";
 import Modal from "./Pages/modal/Modal";
 import TrafficLight from "./Pages/trafficLight/TrafficLight";
+import DigitalClock from "./Pages/digitalClock/DigitalClock";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Route path="/notification" element={<Notification />} />
               <Route path="/modal" element={<Modal />} />
               <Route path="/trafficLight" element={<TrafficLight />} />
+              <Route path="/digitalClock" element={<DigitalClock />} />
             </Routes>
           </MainBody>
         </main>

@@ -24,6 +24,9 @@ const SideBar = () => {
           <li>
             <Link to="/trafficLight">Traffic light</Link>
           </li>
+          <li>
+            <Link to="/digitalClock">Digital Clock</Link>
+          </li>
         </ul>
       </nav>
     </div>
