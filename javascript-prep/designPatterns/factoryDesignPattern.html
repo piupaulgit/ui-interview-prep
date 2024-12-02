@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Design Pattern</title>
+</head>
+<body>
+    <h3>The Factory Design Pattern in JavaScript is a creational design pattern that provides a way to create objects without exposing the instantiation logic to the client. Instead of directly using the new keyword, the factory function abstracts the object creation process and allows for more flexible and reusable code.</h3>
+    <h4>Key Features of the Factory Pattern:</h4>
+    <ul>
+        <li>Encapsulation: It encapsulates the object creation logic, making the code cleaner and easier to manage.</li>
+        <li>Reusability: The same factory can create multiple types of objects based on input parameters.</li>
+        <li>Flexibility: Useful when the type or number of objects to be created is dynamic.</li>
+    </ul>
+
+    <h4>Advantages</h4>
+    <ul>
+        <li>Centralized Object Creation: The creation logic is centralized in one location.</li>
+        <li>Extensibility: New types can be added easily without modifying existing client code.</li>
+        <li>Abstraction: Hides complex instantiation logic from the client.</li>
+    </ul>
+
+    <h4>Use Cases</h4>
+    <ul>
+        <li>When the exact types of objects or their creation logic is unknown at runtime.</li>
+        <li>When the creation process involves some logic that should not be repeated in every place.</li>
+        <li>When you need a consistent way to create objects across your application.</li>
+    </ul>
+    <script>
+        function Developer(name){
+            this.name = name;
+            this.type = "Developer"
+        }
+
+        function Tester(name){
+            this.name = name;
+            this.type = "Tester"
+        }
+
+        function EmployeeFactory(){
+            this.create = (type, name) => {
+                switch (type) {
+                    case 1:
+                        return new Developer(name)
+                
+                    case 2:
+                        return new Tester(name)
+                }
+            }
+        }
+
+        const employees = [];
+        let employeefactory = new EmployeeFactory()
+        employees.push(employeefactory.create(1, "piu" ))
+        employees.push(employeefactory.create(1, "Deep" ))
+        employees.push(employeefactory.create(2, "Rishi" ))
+
+        console.log(employees)
+    </script>
+</body>
+</html>

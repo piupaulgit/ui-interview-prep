@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singleton Design Pattern</title>
+</head>
+<body>
+    <div>
+        <h2>The <b>Singleton Design Pattern</b> is a creational design pattern that ensures a class has only one instance and provides a global point of access to that instance. It is used when exactly one instance of an object is required to coordinate actions across a system.</h2>
+        <h3>Key Characteristics:</h3>
+        <ul>
+            <li>Single Instance: Only one instance of the class exists throughout the application.</li>
+            <li>Global Access Point: The instance is accessible globally, often through a static method or property.</li>
+            <li>Lazy Initialization: The instance is created only when needed, reducing memory usage.
+            </li>
+        </ul>
+
+        <h3>Advantages:</h3>
+        <ul>
+            <li>Controlled Access: Centralized management of shared resources.</li>
+            <li>Consistency: Ensures only one instance is used across the system.</li>
+            <li>Memory Efficient: Reduces overhead by preventing multiple object instances.</li>
+        </ul>
+
+        <h3>Use Cases:</h3>
+        <ul>
+            <li>Configurations: Sharing a single configuration object across the application.</li>
+            <li>Database Connections: Managing a single connection pool for databases.</li>
+            <li>Logging: Ensuring a single logging mechanism across the app.</li>
+        </ul>
+    </div>
+        <script>
+            class Singleton{
+                constructor(data){
+                    if(Singleton.instance){
+                        return Singleton.instance;
+                    }
+
+                    this.data = data;
+                    Singleton.instance = this;
+                }
+
+                getData(){
+                    return this.data;
+                }
+            }
+            const objectOne = new Singleton("object one");
+            const objectTwo = new Singleton("object two");
+
+            console.log(objectOne)
+            console.log(objectTwo)
+
+        </script>
+</body>
+</html>
