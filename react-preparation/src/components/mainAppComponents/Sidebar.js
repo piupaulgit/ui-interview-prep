@@ -27,6 +27,12 @@ const SideBar = () => {
           <li>
             <Link to="/digitalClock">Digital Clock</Link>
           </li>
+          <li>
+            <Link to="/tabs">Tabs</Link>
+          </li>
+          <li>
+            <Link to="/imageCarousel">Image Carousel</Link>
+          </li>
         </ul>
       </nav>
     </div>

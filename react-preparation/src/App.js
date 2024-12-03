@@ -9,6 +9,8 @@ import Notification from "./Pages/notification/Notification";
 import Modal from "./Pages/modal/Modal";
 import TrafficLight from "./Pages/trafficLight/TrafficLight";
 import DigitalClock from "./Pages/digitalClock/DigitalClock";
+import TabPage from "./Pages/tabs/TabPage";
+import ImageCarouselPage from "./Pages/imageCarousel/ImageCarouselPage";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
               <Route path="/modal" element={<Modal />} />
               <Route path="/trafficLight" element={<TrafficLight />} />
               <Route path="/digitalClock" element={<DigitalClock />} />
+              <Route path="/tabs" element={<TabPage />} />
+              <Route path="/imageCarousel" element={<ImageCarouselPage />} />
             </Routes>
           </MainBody>
         </main>

@@ -1,0 +1,14 @@
+.tabs{
+    margin: 20px;
+}
+.tabs ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+button.active{
+    background-color: blueviolet;
+    color: #fff;
+}
