@@ -54,6 +54,10 @@ const menuItems = [
     url: "progressbar2",
     label: "Progress Bar Two",
   },
+  {
+    url: "temparatureConvertor",
+    label: "Temparature Convertor",
+  },
 ];
 const SideBar = () => {
   return (

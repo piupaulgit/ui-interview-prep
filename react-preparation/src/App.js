@@ -15,6 +15,7 @@ import FlightBooker from "./Pages/flightBooker/FlightBooker";
 import GenerateTable from "./Pages/generateTable/GenerateTable";
 import ProgressBarPage from "./Pages/progressBar/ProgressBarPage";
 import ProgressBar2 from "./Pages/progressBar2/ProgressBar2";
+import TemparatureConvertor from "./Pages/temparatureConvertor/TemparatureConvertor";
 
 function App() {
   return (
@@ -41,6 +42,10 @@ function App() {
               <Route path="/generatetable" element={<GenerateTable />} />
               <Route path="/progressbar" element={<ProgressBarPage />} />
               <Route path="/progressbar2" element={<ProgressBar2 />} />
+              <Route
+                path="/temparatureConvertor"
+                element={<TemparatureConvertor />}
+              />
             </Routes>
           </MainBody>
         </main>

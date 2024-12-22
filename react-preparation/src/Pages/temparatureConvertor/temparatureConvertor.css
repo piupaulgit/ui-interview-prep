@@ -1,0 +1,14 @@
+.temparatureConvertor {
+  display: flex;
+  gap: 10px;
+}
+
+.input-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.temparatureConvertor span {
+  align-self: center;
+}
