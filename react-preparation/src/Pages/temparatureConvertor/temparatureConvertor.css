@@ -12,3 +12,9 @@
 .temparatureConvertor span {
   align-self: center;
 }
+.calculated-result {
+  border: 2px sollid #bada55;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+}

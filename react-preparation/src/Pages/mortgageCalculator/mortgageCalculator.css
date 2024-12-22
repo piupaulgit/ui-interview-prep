@@ -1,0 +1,8 @@
+.mortgage-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mortgage-form input {
+  margin-left: 20px;
+}

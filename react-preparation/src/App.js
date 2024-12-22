@@ -16,6 +16,7 @@ import GenerateTable from "./Pages/generateTable/GenerateTable";
 import ProgressBarPage from "./Pages/progressBar/ProgressBarPage";
 import ProgressBar2 from "./Pages/progressBar2/ProgressBar2";
 import TemparatureConvertor from "./Pages/temparatureConvertor/TemparatureConvertor";
+import MortgageCalculator from "./Pages/mortgageCalculator/MortgageCalculator";
 
 function App() {
   return (
@@ -45,6 +46,10 @@ function App() {
               <Route
                 path="/temparatureConvertor"
                 element={<TemparatureConvertor />}
+              />
+              <Route
+                path="/mortgagecalculator"
+                element={<MortgageCalculator />}
               />
             </Routes>
           </MainBody>

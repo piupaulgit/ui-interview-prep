@@ -58,6 +58,10 @@ const menuItems = [
     url: "temparatureConvertor",
     label: "Temparature Convertor",
   },
+  {
+    url: "mortgageCalculator",
+    label: "Mortgage Calculator",
+  },
 ];
 const SideBar = () => {
   return (
