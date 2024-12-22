@@ -1,0 +1,27 @@
+.progressbar-two-holder {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.progressbar-two {
+  width: 100%;
+  background-color: #f1f1f1;
+  height: 10px;
+}
+.progressbar-two span {
+  background-color: green;
+  height: 100%;
+  display: block;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition-duration: 2000ms;
+  transition-property: transform;
+  transition-timing-function: linear;
+}
+
+.progressbar-two.animate span {
+  transform: scaleX(1);
+}

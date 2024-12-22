@@ -1,0 +1,17 @@
+.generate-table tr td {
+  border: 1px solid #333;
+}
+.generate-table {
+  border-collapse: collapse;
+}
+.dynamic-table-generator {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin: 0 auto;
+}
+.dynamic-table-generator input,
+.dynamic-table-generator button {
+  width: 100%;
+  margin-bottom: 10px;
+}

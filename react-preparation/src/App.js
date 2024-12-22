@@ -11,6 +11,10 @@ import TrafficLight from "./Pages/trafficLight/TrafficLight";
 import DigitalClock from "./Pages/digitalClock/DigitalClock";
 import TabPage from "./Pages/tabs/TabPage";
 import ImageCarouselPage from "./Pages/imageCarousel/ImageCarouselPage";
+import FlightBooker from "./Pages/flightBooker/FlightBooker";
+import GenerateTable from "./Pages/generateTable/GenerateTable";
+import ProgressBarPage from "./Pages/progressBar/ProgressBarPage";
+import ProgressBar2 from "./Pages/progressBar2/ProgressBar2";
 
 function App() {
   return (
@@ -33,6 +37,10 @@ function App() {
               <Route path="/digitalClock" element={<DigitalClock />} />
               <Route path="/tabs" element={<TabPage />} />
               <Route path="/imageCarousel" element={<ImageCarouselPage />} />
+              <Route path="/flightBooker" element={<FlightBooker />} />
+              <Route path="/generatetable" element={<GenerateTable />} />
+              <Route path="/progressbar" element={<ProgressBarPage />} />
+              <Route path="/progressbar2" element={<ProgressBar2 />} />
             </Routes>
           </MainBody>
         </main>

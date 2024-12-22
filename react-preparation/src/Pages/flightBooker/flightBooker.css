@@ -1,0 +1,13 @@
+.flight-booker-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.flight-booker-container input,
+.flight-booker-container select {
+  width: 100%;
+  margin-bottom: 10px;
+}

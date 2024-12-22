@@ -1,38 +1,73 @@
 import "./sidebar.css";
 import { Link } from "react-router-dom";
 
+const menuItems = [
+  {
+    url: "",
+    label: "Home",
+  },
+  {
+    url: "googleCalendar",
+    label: "Google Calender",
+  },
+  {
+    url: "typeAheadAutoComplete",
+    label: "Type Ahead/ auto complete",
+  },
+  {
+    url: "notification",
+    label: "Notification",
+  },
+  {
+    url: "modal",
+    label: "Modal",
+  },
+  {
+    url: "trafficLight",
+    label: "Traffic light",
+  },
+  {
+    url: "digitalClock",
+    label: "Digital Clock",
+  },
+  {
+    url: "tabs",
+    label: "Tabs",
+  },
+  {
+    url: "imageCarousel",
+    label: "Image Carousel",
+  },
+  {
+    url: "flightBooker",
+    label: "Flight Booker",
+  },
+  {
+    url: "generateTable",
+    label: "Generate Table",
+  },
+  {
+    url: "progressbar",
+    label: "Progress Bar",
+  },
+  {
+    url: "progressbar2",
+    label: "Progress Bar Two",
+  },
+];
 const SideBar = () => {
   return (
     <div className="sidebar">
       <nav>
         <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/googleCalendar">Google Calendar</Link>
-          </li>
-          <li>
-            <Link to="/typeAheadAutoComplete">Type Ahead/ auto complete</Link>
-          </li>
-          <li>
-            <Link to="/notification">Notification</Link>
-          </li>
-          <li>
-            <Link to="/modal">Modal</Link>
-          </li>
-          <li>
-            <Link to="/trafficLight">Traffic light</Link>
-          </li>
-          <li>
-            <Link to="/digitalClock">Digital Clock</Link>
-          </li>
-          <li>
-            <Link to="/tabs">Tabs</Link>
-          </li>
-          <li>
-            <Link to="/imageCarousel">Image Carousel</Link>
-          </li>
+          {menuItems.length > 0 &&
+            menuItems.map((menu, index) => {
+              return (
+                <li key={index}>
+                  <Link to={`/${menu.url}`}>{menu.label}</Link>
+                </li>
+              );
+            })}
         </ul>
       </nav>
     </div>
