@@ -1,5 +1,27 @@
-.sidebar{
-    max-width: 15%;
-    background-color: #f4f4f4;
-    flex: 15%;
+.sidebar {
+  max-width: 15%;
+  background-color: #f4f4f4;
+  flex: 15%;
+}
+.sidebar ul {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  margin-bottom: 0px;
+}
+
+.sidebar ul li a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  border-bottom: 1px solid #e7e1e1;
+  display: block;
+}
+.sidebar ul li a:hover {
+  background-color: #e7e1e1;
 }

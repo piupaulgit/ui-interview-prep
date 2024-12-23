@@ -19,6 +19,8 @@ import TemparatureConvertor from "./Pages/temparatureConvertor/TemparatureConver
 import MortgageCalculator from "./Pages/mortgageCalculator/MortgageCalculator";
 import AccordionPage from "./Pages/accordion/AccordionPage";
 import DiceRoller from "./Pages/diceRoller/DiceRoller";
+import FileExplorarPlage from "./Pages/fileExplorar/FileExplorarPlage";
+import GridLights from "./Pages/gridLights/GridLights";
 
 function App() {
   return (
@@ -55,6 +57,8 @@ function App() {
               />
               <Route path="/accordionPage" element={<AccordionPage />} />
               <Route path="/diceRoller" element={<DiceRoller />} />
+              <Route path="/fileExplorar" element={<FileExplorarPlage />} />
+              <Route path="/gridLights" element={<GridLights />} />
             </Routes>
           </MainBody>
         </main>

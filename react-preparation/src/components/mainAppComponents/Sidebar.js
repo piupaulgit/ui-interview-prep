@@ -70,6 +70,14 @@ const menuItems = [
     url: "diceRoller",
     label: "Dice Roller",
   },
+  {
+    url: "fileExplorar",
+    label: "File Explorar",
+  },
+  {
+    url: "gridLights",
+    label: "Grid Lights",
+  },
 ];
 const SideBar = () => {
   return (
