@@ -82,6 +82,10 @@ const menuItems = [
     url: "customHooks",
     label: "Custom Hooks",
   },
+  {
+    url: "higherOrderComponent",
+    label: "Higher Order Component",
+  },
 ];
 const SideBar = () => {
   return (

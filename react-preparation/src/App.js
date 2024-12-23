@@ -22,6 +22,7 @@ import DiceRoller from "./Pages/diceRoller/DiceRoller";
 import FileExplorarPlage from "./Pages/fileExplorar/FileExplorarPlage";
 import GridLights from "./Pages/gridLights/GridLights";
 import CustomHooks from "./Pages/customHooks/CustomHooks";
+import HigherOrderComponent from "./Pages/higherOrderComponent/HigherOrderComponent";
 
 function App() {
   return (
@@ -61,6 +62,10 @@ function App() {
               <Route path="/fileExplorar" element={<FileExplorarPlage />} />
               <Route path="/gridLights" element={<GridLights />} />
               <Route path="/customHooks" element={<CustomHooks />} />
+              <Route
+                path="/higherOrderComponent"
+                element={<HigherOrderComponent />}
+              />
             </Routes>
           </MainBody>
         </main>
