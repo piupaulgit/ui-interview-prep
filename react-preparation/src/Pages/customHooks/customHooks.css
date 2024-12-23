@@ -1,0 +1,24 @@
+.form-holder {
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.form-holder label {
+  display: block;
+  margin-bottom: 10px;
+}
+.form-holder input {
+  margin-bottom: 20px;
+}
+
+.countDown-holder {
+  background-color: #f1f1f1;
+  margin-top: 30px;
+  max-width: 300px;
+  padding: 20px;
+}

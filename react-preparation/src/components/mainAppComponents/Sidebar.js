@@ -78,6 +78,10 @@ const menuItems = [
     url: "gridLights",
     label: "Grid Lights",
   },
+  {
+    url: "customHooks",
+    label: "Custom Hooks",
+  },
 ];
 const SideBar = () => {
   return (

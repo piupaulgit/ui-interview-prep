@@ -21,6 +21,7 @@ import AccordionPage from "./Pages/accordion/AccordionPage";
 import DiceRoller from "./Pages/diceRoller/DiceRoller";
 import FileExplorarPlage from "./Pages/fileExplorar/FileExplorarPlage";
 import GridLights from "./Pages/gridLights/GridLights";
+import CustomHooks from "./Pages/customHooks/CustomHooks";
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
               <Route path="/diceRoller" element={<DiceRoller />} />
               <Route path="/fileExplorar" element={<FileExplorarPlage />} />
               <Route path="/gridLights" element={<GridLights />} />
+              <Route path="/customHooks" element={<CustomHooks />} />
             </Routes>
           </MainBody>
         </main>
