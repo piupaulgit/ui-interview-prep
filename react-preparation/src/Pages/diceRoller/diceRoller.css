@@ -1,0 +1,59 @@
+.dice-holder {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  border: 1px solid #333;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 270px;
+  margin-top: 20px;
+}
+.dice {
+  border-radius: 20px;
+  height: 80px;
+  width: 80px;
+  background-color: #fff;
+  position: relative;
+  border: 1px solid #333;
+}
+
+.dice .dots {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  gap: 10px;
+}
+
+.dice.dice-with-3 .dots {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.dice.dice-with-4 .dots {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.dice.dice-with-5 .dots {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.dice.dice-with-5 .dots .dot:nth-child(3) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dice.dice-with-6 .dots {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.dice .dot {
+  height: 10px;
+  width: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  display: block;
+}

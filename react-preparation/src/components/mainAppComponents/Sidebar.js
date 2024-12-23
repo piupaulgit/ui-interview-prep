@@ -62,6 +62,14 @@ const menuItems = [
     url: "mortgageCalculator",
     label: "Mortgage Calculator",
   },
+  {
+    url: "accordionPage",
+    label: "Accordion",
+  },
+  {
+    url: "diceRoller",
+    label: "Dice Roller",
+  },
 ];
 const SideBar = () => {
   return (

@@ -17,6 +17,8 @@ import ProgressBarPage from "./Pages/progressBar/ProgressBarPage";
 import ProgressBar2 from "./Pages/progressBar2/ProgressBar2";
 import TemparatureConvertor from "./Pages/temparatureConvertor/TemparatureConvertor";
 import MortgageCalculator from "./Pages/mortgageCalculator/MortgageCalculator";
+import AccordionPage from "./Pages/accordion/AccordionPage";
+import DiceRoller from "./Pages/diceRoller/DiceRoller";
 
 function App() {
   return (
@@ -51,6 +53,8 @@ function App() {
                 path="/mortgagecalculator"
                 element={<MortgageCalculator />}
               />
+              <Route path="/accordionPage" element={<AccordionPage />} />
+              <Route path="/diceRoller" element={<DiceRoller />} />
             </Routes>
           </MainBody>
         </main>

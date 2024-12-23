@@ -39,7 +39,7 @@ const TemparatureConvertor = () => {
             value={fahrenheit}
             onChange={(event) => {
               const newValue = event.target.value;
-              SetFahrenheit(newValue);
+              setFahrenheit(newValue);
               convert(newValue, setCelsius, (value) => ((value - 32) * 5) / 9);
             }}
           />
