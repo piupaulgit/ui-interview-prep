@@ -55,6 +55,10 @@ const menuItems = [
     label: "Progress Bar Two",
   },
   {
+    url: "progressBarThree",
+    label: "Progress Bar Three",
+  },
+  {
     url: "temparatureConvertor",
     label: "Temparature Convertor",
   },

@@ -1,0 +1,22 @@
+.bars-three-holder {
+  display: flex;
+  max-width: 50%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.progress-bar-three {
+  height: 10px;
+  background-color: #f1f1f1;
+}
+.progress-bar-three span {
+  background-color: green;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition-duration: 2000ms;
+  display: block;
+  height: 10px;
+}
+.progress-bar-three.animate span {
+  transform: scaleX(1);
+}

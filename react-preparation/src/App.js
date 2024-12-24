@@ -23,6 +23,7 @@ import FileExplorarPlage from "./Pages/fileExplorar/FileExplorarPlage";
 import GridLights from "./Pages/gridLights/GridLights";
 import CustomHooks from "./Pages/customHooks/CustomHooks";
 import HigherOrderComponent from "./Pages/higherOrderComponent/HigherOrderComponent";
+import ProgressBarThree from "./Pages/progressBarThree/ProgressBarThree";
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
                 path="/higherOrderComponent"
                 element={<HigherOrderComponent />}
               />
+              <Route path="/progressBarThree" element={<ProgressBarThree />} />
             </Routes>
           </MainBody>
         </main>
