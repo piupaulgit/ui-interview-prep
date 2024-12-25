@@ -1,0 +1,75 @@
+.connect-four-game-board {
+  width: 500px;
+}
+
+.connect-four-game-board .switch-board {
+  padding: 20px;
+  padding-bottom: 0;
+  display: grid;
+}
+.connect-four-game-board .game-board {
+  padding: 20px;
+  margin-bottom: 10px;
+  display: grid;
+  background-color: rgb(84, 84, 237);
+  border-radius: 20px;
+}
+
+.connect-four-game-board .cell {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+.connect-four-game-board .switch-board .cell.red:hover {
+  background-color: rgb(232, 59, 59);
+}
+
+.connect-four-game-board .switch-board .cell.yellow:hover {
+  background-color: rgb(232, 180, 60);
+  transition: all 0.5s;
+}
+.connect-four-game-board .game-board .cell.red {
+  background-color: rgb(232, 59, 59);
+}
+
+.connect-four-game-board .game-board .cell.yellow {
+  background-color: rgb(232, 180, 60);
+  transition: all 0.5s;
+}
+
+.connect-four-game-board .others {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connect-four-game-board .others button {
+  background-color: rgb(56, 56, 56);
+  color: #fff;
+  padding: 13px;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+
+.connect-four-game-board .others button:hover {
+  background-color: #d5d3d3;
+  color: rgb(56, 56, 56);
+}
+
+.connect-four-game-board .others .winner {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+  line-height: 100px;
+}

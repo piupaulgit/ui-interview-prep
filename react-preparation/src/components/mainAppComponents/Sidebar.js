@@ -90,6 +90,18 @@ const menuItems = [
     url: "higherOrderComponent",
     label: "Higher Order Component",
   },
+  {
+    url: "starRating",
+    label: "Star Rating",
+  },
+  {
+    url: "tictactoe",
+    label: "Tic-Tac-Toe",
+  },
+  {
+    url: "connectFourGame",
+    label: "Connect Four Game",
+  },
 ];
 const SideBar = () => {
   return (

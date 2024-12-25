@@ -24,6 +24,9 @@ import GridLights from "./Pages/gridLights/GridLights";
 import CustomHooks from "./Pages/customHooks/CustomHooks";
 import HigherOrderComponent from "./Pages/higherOrderComponent/HigherOrderComponent";
 import ProgressBarThree from "./Pages/progressBarThree/ProgressBarThree";
+import StarRatingPage from "./Pages/starRating/StarRatingPage";
+import TicTacToe from "./Pages/tictactoe/TicTacToe";
+import ConnectFourGame from "./Pages/connectFourGame/ConnectFourGame";
 
 function App() {
   return (
@@ -68,6 +71,9 @@ function App() {
                 element={<HigherOrderComponent />}
               />
               <Route path="/progressBarThree" element={<ProgressBarThree />} />
+              <Route path="/starRating" element={<StarRatingPage />} />
+              <Route path="/tictactoe" element={<TicTacToe />} />
+              <Route path="/connectFourGame" element={<ConnectFourGame />} />
             </Routes>
           </MainBody>
         </main>

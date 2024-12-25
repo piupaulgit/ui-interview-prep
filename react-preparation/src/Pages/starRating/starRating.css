@@ -1,0 +1,10 @@
+.star-btns {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.star-btns svg {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}

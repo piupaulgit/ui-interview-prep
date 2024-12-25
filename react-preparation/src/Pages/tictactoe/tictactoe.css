@@ -1,0 +1,20 @@
+.tictactoe-game-board {
+  display: grid;
+  margin-bottom: 20px;
+}
+.tictactoe-game-board .cell {
+  height: 100px;
+  border: 1px solid #333;
+  border-collapse: collapse;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 40px;
+  color: #fff;
+}
+
+.tictactoe-game-board .cell.blue {
+  background-color: rgb(105, 105, 210);
+}
+.tictactoe-game-board .cell.red {
+  background-color: rgb(232, 137, 137);
+}
