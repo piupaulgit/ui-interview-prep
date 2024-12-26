@@ -118,6 +118,10 @@ const menuItems = [
     url: "phoneNumberValidation",
     label: "Phone Number Validation",
   },
+  {
+    url: "pagination",
+    label: "Pagination",
+  },
 ];
 const SideBar = () => {
   return (

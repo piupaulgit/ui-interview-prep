@@ -31,6 +31,7 @@ import InfiniteScrollList from "./Pages/infiniteScrollList/InfiniteScrollList";
 import VirtualScroll from "./Pages/virtualScroll/VirtualScroll";
 import Debounce from "./Pages/debunceWithReact/Debounce";
 import PhoneNumberValidation from "./Pages/phoneNumberValidation/PhoneNumberValidation";
+import Pagination from "./Pages/pagination/Pagination";
 
 function App() {
   return (
@@ -85,6 +86,7 @@ function App() {
                 path="/phoneNumberValidation"
                 element={<PhoneNumberValidation />}
               />
+              <Route path="/pagination" element={<Pagination />} />
             </Routes>
           </MainBody>
         </main>
