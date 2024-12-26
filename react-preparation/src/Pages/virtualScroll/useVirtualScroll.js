@@ -12,8 +12,6 @@ const useVirtualScroll = (data, itemHeight, containerHeight) => {
     const newStartIndex = Math.floor(scrollTop / itemHeight);
     const newEndIndex = newStartIndex + Math.ceil(containerHeight / itemHeight);
 
-    console.log(scrollTop);
-
     setStartIndex(newStartIndex);
     setEndIndex(newEndIndex);
   }, [itemHeight, containerHeight]);

@@ -29,6 +29,7 @@ import TicTacToe from "./Pages/tictactoe/TicTacToe";
 import ConnectFourGame from "./Pages/connectFourGame/ConnectFourGame";
 import InfiniteScrollList from "./Pages/infiniteScrollList/InfiniteScrollList";
 import VirtualScroll from "./Pages/virtualScroll/VirtualScroll";
+import Debounce from "./Pages/debunceWithReact/Debounce";
 
 function App() {
   return (
@@ -78,6 +79,7 @@ function App() {
               <Route path="/connectFourGame" element={<ConnectFourGame />} />
               <Route path="/infiniteScroll" element={<InfiniteScrollList />} />
               <Route path="/virtualScroll" element={<VirtualScroll />} />
+              <Route path="/debounceWithReact" element={<Debounce />} />
             </Routes>
           </MainBody>
         </main>

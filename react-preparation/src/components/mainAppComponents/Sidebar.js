@@ -110,6 +110,10 @@ const menuItems = [
     url: "virtualScroll",
     label: "Virtual Scroll",
   },
+  {
+    url: "debounceWithReact",
+    label: "Debounce With React",
+  },
 ];
 const SideBar = () => {
   return (
