@@ -114,6 +114,10 @@ const menuItems = [
     url: "debounceWithReact",
     label: "Debounce With React",
   },
+  {
+    url: "phoneNumberValidation",
+    label: "Phone Number Validation",
+  },
 ];
 const SideBar = () => {
   return (

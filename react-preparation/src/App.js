@@ -30,6 +30,7 @@ import ConnectFourGame from "./Pages/connectFourGame/ConnectFourGame";
 import InfiniteScrollList from "./Pages/infiniteScrollList/InfiniteScrollList";
 import VirtualScroll from "./Pages/virtualScroll/VirtualScroll";
 import Debounce from "./Pages/debunceWithReact/Debounce";
+import PhoneNumberValidation from "./Pages/phoneNumberValidation/PhoneNumberValidation";
 
 function App() {
   return (
@@ -80,6 +81,10 @@ function App() {
               <Route path="/infiniteScroll" element={<InfiniteScrollList />} />
               <Route path="/virtualScroll" element={<VirtualScroll />} />
               <Route path="/debounceWithReact" element={<Debounce />} />
+              <Route
+                path="/phoneNumberValidation"
+                element={<PhoneNumberValidation />}
+              />
             </Routes>
           </MainBody>
         </main>
