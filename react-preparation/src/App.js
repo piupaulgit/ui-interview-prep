@@ -27,6 +27,8 @@ import ProgressBarThree from "./Pages/progressBarThree/ProgressBarThree";
 import StarRatingPage from "./Pages/starRating/StarRatingPage";
 import TicTacToe from "./Pages/tictactoe/TicTacToe";
 import ConnectFourGame from "./Pages/connectFourGame/ConnectFourGame";
+import InfiniteScrollList from "./Pages/infiniteScrollList/InfiniteScrollList";
+import VirtualScroll from "./Pages/virtualScroll/VirtualScroll";
 
 function App() {
   return (
@@ -74,6 +76,8 @@ function App() {
               <Route path="/starRating" element={<StarRatingPage />} />
               <Route path="/tictactoe" element={<TicTacToe />} />
               <Route path="/connectFourGame" element={<ConnectFourGame />} />
+              <Route path="/infiniteScroll" element={<InfiniteScrollList />} />
+              <Route path="/virtualScroll" element={<VirtualScroll />} />
             </Routes>
           </MainBody>
         </main>

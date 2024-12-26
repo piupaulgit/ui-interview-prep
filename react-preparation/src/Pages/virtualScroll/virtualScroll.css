@@ -1,0 +1,8 @@
+.virtual-scroll .container {
+  border: 2px solid red;
+  width: 300px;
+}
+
+.virtual-scroll .container .item {
+  background-color: #f1f1f1;
+}

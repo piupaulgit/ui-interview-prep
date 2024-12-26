@@ -102,6 +102,14 @@ const menuItems = [
     url: "connectFourGame",
     label: "Connect Four Game",
   },
+  {
+    url: "infiniteScroll",
+    label: "Infinite Scroll List",
+  },
+  {
+    url: "virtualScroll",
+    label: "Virtual Scroll",
+  },
 ];
 const SideBar = () => {
   return (
