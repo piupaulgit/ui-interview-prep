@@ -73,12 +73,75 @@ class BinarySearchTree {
       }
     }
   }
+
+  BFS() {
+    let result = [];
+    let queue = [this.root];
+
+    while (queue.length) {
+      let node = queue.shift();
+      result.push(node.value);
+      if (node.left) {
+        queue.push(node.left);
+      }
+
+      if (node.right) {
+        queue.push(node.right);
+      }
+    }
+
+    return result;
+  }
+
+  DFSPreOrder() {
+    let result = [];
+
+    function traverse(node) {
+      result.push(node.value);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+
+    traverse(this.root);
+    return result;
+  }
+
+  DFSPostOrder() {
+    let result = [];
+
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      result.push(node.value);
+    }
+
+    traverse(this.root);
+    return result;
+  }
+
+  DFSInOrder() {
+    let result = [];
+
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      result.push(node.value);
+      if (node.right) traverse(node.right);
+    }
+
+    traverse(this.root);
+    return result;
+  }
 }
 
 const BTS = new BinarySearchTree();
-BTS.insert(6);
-BTS.insert(7);
 BTS.insert(10);
-BTS.insert(5);
-console.log(BTS.find(5));
-// console.log(BTS);
+BTS.insert(6);
+BTS.insert(15);
+BTS.insert(3);
+BTS.insert(8);
+BTS.insert(20);
+console.log(BTS.BFS());
+console.log(BTS.DFSPreOrder());
+console.log(BTS.DFSPostOrder());
+console.log(BTS.DFSInOrder());
+console.log(BTS);
