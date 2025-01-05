@@ -1,18 +1,19 @@
 const selectionSort = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     let smallest = i;
+
     for (let j = i + 1; j < arr.length; j++) {
-      if (arr[smallest] > arr[j]) {
+      if (arr[j] < arr[smallest]) {
         smallest = j;
       }
     }
 
-    if (smallest !== i) {
-      [arr[i], arr[smallest]] = [arr[smallest], arr[i]];
+    if (i !== smallest) {
+      [arr[smallest], arr[i]] = [arr[i], arr[smallest]];
     }
   }
 
   return arr;
 };
 
-console.log(selectionSort([2, 4, 3, 8, 4, 5, 9]));
+console.log(selectionSort([4, 6, 1, 3, 8, 5, 2, 89, 55, 67]));

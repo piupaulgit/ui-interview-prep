@@ -1,74 +1,84 @@
 class Node {
-    constructor(value){
-        this.value = value;
-        this.left = null;
-        this.right = null
-    }
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
 }
 
 class BinarySearchTree {
-    constructor(){
-        this.root = null;
-    }
-    
-    insert(value){
-        const newNode = new Node(value);
-        if(this.root === null){
-            this.root = newNode;
-            return this;
-        }
+  constructor() {
+    this.root = null;
+  }
 
-        let current = this.root;
-        if(current.value === value) {
-            return false
-        }
-        let added = false;
-        while(!added){
-            if(value > current.value){
-                if(current.right === null){
-                    current.right = newNode;
-                    added = true;
-                }else{
-                    current = current.right
-                }
-            }
+  insert(value) {
+    const node = new Node(value);
 
-            if(value < current.value){
-                if(current.left === null){
-                    current.left = newNode;
-                    added = true;
-                }else{
-                    current = current.left
-                }
-            }
-        }
-
-        return this;
+    if (this.root === null) {
+      this.root = node;
+      return this;
     }
 
-    find(value){
-        let current = this.root;
-        let found = false
-        while(current && !found){
-            if(value > current.value){
-                current = current.right
-            }else if(value < current.value){
-                current = current.left
-            }else{
-                found = true;
-                return current;
-            }
-        }
+    let current = this.root;
+
+    if (current.value === value) {
+      return this;
     }
+
+    let added = false;
+
+    while (!added) {
+      if (value > current.value) {
+        if (current.right === null) {
+          current.right = node;
+          added = true;
+          return this;
+        } else {
+          current = current.right;
+        }
+      }
+
+      if (value < current.value) {
+        if (current.left === null) {
+          current.left = node;
+          added = true;
+          return this;
+        } else {
+          current = current.left;
+        }
+      }
+    }
+  }
+
+  find(value) {
+    let current = this.root;
+
+    if (current.value === value) {
+      return current;
+    }
+
+    let found = false;
+
+    while (current && !found) {
+      if (current.value === value) {
+        found = true;
+        return current;
+      }
+
+      if (value > current.value) {
+        current = current.right;
+      }
+      if (value < current.value) {
+        current = current.left;
+      }
+    }
+  }
 }
 
-const bts = new BinarySearchTree();
-bts.insert(9)
-bts.insert(10)
-bts.insert(2)
-bts.insert(1)
-bts.insert(3)
-const ele = bts.find(9)
-console.log(ele, 'found')
-
-console.log(bts)
+const BTS = new BinarySearchTree();
+BTS.insert(6);
+BTS.insert(7);
+BTS.insert(10);
+BTS.insert(5);
+console.log(BTS.find(5));
+// console.log(BTS);
