@@ -122,6 +122,10 @@ const menuItems = [
     url: "pagination",
     label: "Pagination",
   },
+  {
+    url: "singleMultiSelect",
+    label: "Single or Multi Select",
+  },
 ];
 const SideBar = () => {
   return (

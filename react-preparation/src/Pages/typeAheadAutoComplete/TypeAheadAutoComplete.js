@@ -32,7 +32,7 @@ const TypeAheadAutoComplete = () => {
   };
 
   return (
-    <div>
+    <div className="type-ahead">
       <PageHeader text="Type Ahead / Auto Complete Search bar" />
       <input
         type="text"

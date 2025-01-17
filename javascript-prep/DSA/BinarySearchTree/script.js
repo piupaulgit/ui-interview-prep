@@ -131,17 +131,29 @@ class BinarySearchTree {
     traverse(this.root);
     return result;
   }
+
+  findKthSmallNumber(k) {
+    let result = [];
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      result.push(node.value);
+    }
+
+    traverse(this.root);
+    return result[k - 1];
+  }
 }
 
 const BTS = new BinarySearchTree();
-BTS.insert(10);
-BTS.insert(6);
-BTS.insert(15);
+BTS.insert(5);
 BTS.insert(3);
-BTS.insert(8);
-BTS.insert(20);
-console.log(BTS.BFS());
-console.log(BTS.DFSPreOrder());
-console.log(BTS.DFSPostOrder());
-console.log(BTS.DFSInOrder());
+BTS.insert(6);
+BTS.insert(4);
+BTS.insert(2);
+BTS.insert(1);
+console.log(BTS.findKthSmallNumber(3));
+// console.log(BTS.BFS());
+// console.log(BTS.DFSPreOrder());
+// console.log(BTS.DFSPostOrder());
+// console.log(BTS.DFSInOrder());
 console.log(BTS);
