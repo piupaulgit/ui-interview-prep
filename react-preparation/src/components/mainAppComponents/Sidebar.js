@@ -126,6 +126,14 @@ const menuItems = [
     url: "singleMultiSelect",
     label: "Single or Multi Select",
   },
+  {
+    url: "realClock",
+    label: "Real Clock",
+  },
+  {
+    url: "nestedCheckbox",
+    label: "Nested Checkbox",
+  },
 ];
 const SideBar = () => {
   return (

@@ -33,6 +33,8 @@ import Debounce from "./Pages/debunceWithReact/Debounce";
 import PhoneNumberValidation from "./Pages/phoneNumberValidation/PhoneNumberValidation";
 import Pagination from "./Pages/pagination/Pagination";
 import SingleMultiSelectPage from "./Pages/singleMultiSelect/SingleMultiSelectPage";
+import RealClock from "./Pages/realClock/RealClock";
+import NestedCheckBox from "./Pages/nestedCheckbox/NestedCheckBox";
 
 function App() {
   return (
@@ -92,6 +94,8 @@ function App() {
                 path="/singleMultiSelect"
                 element={<SingleMultiSelectPage />}
               />
+              <Route path="/realClock" element={<RealClock />} />
+              <Route path="/nestedCheckbox" element={<NestedCheckBox />} />
             </Routes>
           </MainBody>
         </main>

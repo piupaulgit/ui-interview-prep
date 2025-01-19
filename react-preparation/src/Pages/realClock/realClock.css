@@ -1,0 +1,43 @@
+.real-clock {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 2px solid #abda55;
+  position: relative;
+}
+
+.real-clock::before {
+  height: 5px;
+  width: 5px;
+  background-color: #abda55;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.real-clock .hand {
+  background-color: #333;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom;
+  border-radius: 3px;
+}
+
+.real-clock .hand.second_hand {
+  height: 90px;
+  width: 1px;
+}
+.real-clock .hand.minute_hand {
+  height: 88px;
+  width: 3px;
+  rotate: 20deg;
+}
+.real-clock .hand.hour_hand {
+  height: 70px;
+  width: 5px;
+  rotate: 90deg;
+}
