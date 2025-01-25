@@ -187,3 +187,35 @@ myPromiseAny([promiseOneAny, promiseTwoAny, promiseThreeAny, promiseFourAny])
     console.log(err);
   });
 //promise.any polyfill ends
+
+// =======Auto-retry Promise on rejection=========
+// For a web application, fetching API data is a common task.
+// But the API calls might fail because of Network problems. Usually we could show a screen for Network Error and ask users to retry.
+// One approach to handle this is auto retry when network error occurs.
+// You are asked to create a fetchWithAutoRetry(fetcher, count), which automatically fetch again when error happens, until the maximum count is met.
+// For the problem here, there is no need to detect network error, you can just retry on all promise rejections.
+
+const fetchWithAutoRetry = (fetcher, count) => {
+  return new Promise((resolve, reject) => {
+    const attempt = (remainingCount) => {
+      fetcher()
+        .then(resolve)
+        .catch((err) => {
+          if (remainingCount > 0) {
+            console.warn(`Retrying... Attempts left: ${remainingCount}`);
+            attempt(remainingCount - 1);
+          } else {
+            reject(err);
+          }
+        });
+    };
+
+    attempt(count);
+  });
+};
+
+const fetcher = () => fetch("https://api.example.com/data");
+fetchWithAutoRetry(fetcher, 3)
+  .then((response) => response.json())
+  .then((data) => console.log("Data fetched successfully:", data))
+  .catch((error) => console.error("Failed to fetch data:", error));
